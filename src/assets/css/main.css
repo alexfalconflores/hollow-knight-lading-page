@@ -10,6 +10,7 @@
 html {
     height: 100%;
     font-size: 62.5%;
+    margin: 0;
 }
 
 body {
@@ -50,24 +51,29 @@ body {
 
 nav {
     display: flex;
-    margin: 0;
-    width: 100%;
+    /* margin: 0; */
     height: 7rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--background-page-dark);
 }
 
-nav .container-nav {
+nav > .container-nav {
     width: 100%;
     display: grid;
     grid-template-columns: 15% 1fr 1fr 15%;
 }
 
-.logo-container {
+.container-nav > .logo-container {
     grid-column-start: 2;
     justify-self: start;
     align-self: center;
 }
 
-.logo-container a img {
+.container-nav > .logo-container a img {
     width: 4.8rem;
 }
 
@@ -92,4 +98,105 @@ nav .container-nav {
 
 .icons-container a img {
     width: 3.2rem;
+}
+
+.parallax{
+    background-image: url("../svg/parallax-back.svg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax-container {
+    height: 100%;
+    backdrop-filter: blur(84px) brightness(1) contrast(2);
+}
+
+.parallax-container > .content {
+    background-position: bottom;
+    background-image: url("../svg/parallax-front.svg");
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.info-phone {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    visibility: collapse;
+    display: none;
+}
+
+.info-container-phone {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 36rem;
+}
+
+.info-container-phone h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--color-font-1);
+}
+
+.info-container-phone h2 {
+    color: var(--color-font-1);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 23.2rem;
+    margin-left: 13%;
+}
+
+.info-container h1 {
+    font-size: 6rem;
+    color: var(--color-font-1);
+    margin: 0;
+}
+
+.info-container h2 {
+    font-size: 2.4rem;
+    color: var(--color-font-1);
+    margin: 0;
+}
+
+.info p {
+    font-size: 2.4rem;
+    color: var(--color-font-2);
+}
+
+.content > .logo-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-right: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container > .logo {
+    height: 18.3rem;
+    margin-bottom: 27rem;
+    margin-left: 2rem;
+}
+
+.n1{
+    height: 100rem;
+    background-color: blue;
+}
+
+.n2{
+    height: 100rem;
+    background-color: seagreen;
 }
