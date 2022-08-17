@@ -1,3 +1,16 @@
+var sBrowser, sUsrAg = navigator.userAgent;
+let parallaxContainer = document.querySelector('.parallax-container');
+
+if(sUsrAg.indexOf("Firefox") > -1) {
+    sBrowser = "Firefox";
+}
+
+if (sBrowser == "Firefox") {
+    parallaxContainer.style.backgroundColor = "#171717";
+}
+
+
+
 let wallpaperCarousel = document.querySelector('#wallpaper-carousel');
 let dotContainer = document.querySelector('#dot-container');
 

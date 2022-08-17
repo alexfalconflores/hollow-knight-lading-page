@@ -105,7 +105,7 @@ nav>.icons-container>a>img {
 
 .parallax-container {
     height: 100%;
-    backdrop-filter: blur(84px) brightness(1) contrast(2);
+    /* backdrop-filter: blur(84px) brightness(1) contrast(2); */
 }
 
 .parallax-container>.content {
@@ -202,7 +202,7 @@ nav>.icons-container>a>img {
     grid-template-columns: min-content 1fr min-content;
 }
 
-.wallpapers>.wallpapers-container>.button-left{
+.wallpapers>.wallpapers-container>.button-left {
     grid-column: 1;
     align-self: center;
     padding-right: 8rem;
@@ -215,43 +215,48 @@ nav>.icons-container>a>img {
     border-radius: .8rem;
 }
 
-.wallpapers>.wallpapers-container>.button-right{
+.wallpapers>.wallpapers-container>.button-right {
     grid-column: 3;
     align-self: center;
     padding-left: 8rem;
 }
 
-.button-custom{
+.button-custom {
     background-color: transparent;
     height: fit-content;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 
 /* Image Section */
-.img-resize{
+.img-resize {
     width: 100%;
     height: auto;
 }
 
-.img-button-resize{
+.img-button-resize {
     width: auto;
     height: 10rem;
 }
 
 /* Fading animation */
-.fade{
+.fade {
     animation-name: fade;
     animation-duration: 1.2s;
 }
 
-@keyframes fade{
-    from{opacity: .4}
-    to{opacity: 1}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* Dot section */
-.dot-container{
+.dot-container {
     grid-column: 2;
     grid-row: 2;
     width: fit-content;
@@ -259,7 +264,7 @@ nav>.icons-container>a>img {
     margin-top: 1rem;
 }
 
-.dot{
+.dot {
     cursor: pointer;
     height: 1.5rem;
     width: 1.5rem;
@@ -270,11 +275,11 @@ nav>.icons-container>a>img {
     transition: background-color 0.4s ease
 }
 
-.hover:hover{
+.hover:hover {
     background-color: var(--color-font-2);
 }
 
-.dot-active{
+.dot-active {
     background-color: var(--color-font-2);
 }
 
@@ -289,20 +294,19 @@ nav>.icons-container>a>img {
     height: 30rem;
 }
 
-.videos > .hollow-knight-container{
+.videos>.hollow-knight-container {
     grid-column: 2;
     grid-row: 1/3;
     margin-right: 10rem;
     height: inherit;
 }
 
-.videos > .hollow-knight-container>a>img{
+.videos>.hollow-knight-container>a>img {
     width: 100%;
     height: 100%;
 }
 
-.videos>h2{
-    /* background-color: red; */
+.videos>h2 {
     grid-column: 3;
     grid-row: 1;
     font-size: 6rem;
@@ -311,31 +315,54 @@ nav>.icons-container>a>img {
     height: fit-content;
 }
 
-.videos > .video-youtube-container{
+.videos>.video-youtube-container {
     margin: 0;
     grid-column: 3;
     grid-row: 2;
-    /* background-color: yellow; */
 }
 
 
 /* Media Query Section */
 @media screen and (max-width: 1024px) {
-    .wallpapers>.wallpapers-container>.button-left{
+    .wallpapers>.wallpapers-container>.button-left {
         padding-right: 2rem;
     }
-    .wallpapers>.wallpapers-container>.button-right{
+
+    .wallpapers>.wallpapers-container>.button-right {
         padding-left: 2rem;
     }
-    .img-button-resize{
+
+    .img-button-resize {
         width: auto;
         height: 8rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .img-button-resize{
+    .img-button-resize {
         width: auto;
         height: 6rem;
+    }
+}
+
+@supports (backdrop-filter: blur(84px) brightness(1) contrast(2)) {
+    .parallax-container{
+        backdrop-filter: blur(84px) brightness(1) contrast(2)
+    }
+}
+
+@supports not (height: fit-content) {
+
+    .wallpapers,
+    .wallpapers>.wallpapers-container,
+    .wallpapers>.wallpapers-container>.wallpaper-carrousel,
+    .button-custom,
+    .videos>h2 {
+        height: max-content;
+        height: -moz-max-content;
+    }
+    .dot-container{
+        width: max-content;
+        width: -moz-max-content;
     }
 }
