@@ -22,19 +22,19 @@ body {
 }
 
 /* Tooltip */
-[data-title] {
+[data-tooltip] {
     position: relative;
 }
 
-[data-title]:hover:after {
+[data-tooltip]:hover:after {
     opacity: 1;
     transition: all 0.1s ease 0.5s;
     visibility: visible;
 }
 
-[data-title]:after {
+[data-tooltip]:after {
     font-family: var(--font-family-system);
-    content: attr(data-title);
+    content: attr(data-tooltip);
     border: .1rem solid var(--color-icon);
     border-radius: .3rem;
     background-color: var(--color-font-2);
