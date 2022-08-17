@@ -93,6 +93,7 @@ nav>.icons-container>a>img {
     border-left: .1rem solid var(--color-icon);
 }
 
+/* Parallax Section */
 .parallax {
     background-image: url("../svg/parallax-back.svg");
     height: 100%;
@@ -227,6 +228,7 @@ nav>.icons-container>a>img {
     cursor: pointer;
 }
 
+/* Image Section */
 .img-resize{
     width: 100%;
     height: auto;
@@ -237,6 +239,18 @@ nav>.icons-container>a>img {
     height: 10rem;
 }
 
+/* Fading animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+@keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+
+/* Dot section */
 .dot-container{
     grid-column: 2;
     grid-row: 2;
@@ -265,7 +279,6 @@ nav>.icons-container>a>img {
 }
 
 /* Videos section */
-
 .videos {
     display: grid;
     margin-top: 14rem;
@@ -305,6 +318,8 @@ nav>.icons-container>a>img {
     /* background-color: yellow; */
 }
 
+
+/* Media Query Section */
 @media screen and (max-width: 1024px) {
     .wallpapers>.wallpapers-container>.button-left{
         padding-right: 2rem;

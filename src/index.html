@@ -17,11 +17,16 @@
             <a href="" data-title="Hollow Knight"><img src="assets/svg/icon-hollow-knight-mono.svg" alt="logo"></a>
         </div>
         <div class="icons-container">
-            <a href="https://www.teamcherry.com.au/" data-title="Team Cherry" target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-team-cherry.svg" alt="team-cherry page"></a>
+            <a href="https://www.teamcherry.com.au/" data-title="Team Cherry" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-team-cherry.svg" alt="team-cherry page"></a>
             <div class="separator"></div>
-            <a href="https://twitter.com/falcon_stefano" data-title="Twitter : @falcon_stefano" target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-twitter.svg" alt="twitter"></a>
-            <a href="https://github.com/alexfalconflores/hollow-knight-lading-page" data-title="Github repository" target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-github.svg" alt="github repository"></a>
-            <a href="https://www.youtube.com/c/TeamCherry" data-title="YouTube Channel" target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-youtube.svg" alt="YouTube channel"></a>
+            <a href="https://twitter.com/falcon_stefano" data-title="Twitter : @falcon_stefano" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-twitter.svg" alt="twitter"></a>
+            <a href="https://github.com/alexfalconflores/hollow-knight-lading-page" data-title="Github repository"
+                target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-github.svg"
+                    alt="github repository"></a>
+            <a href="https://www.youtube.com/c/TeamCherry" data-title="YouTube Channel" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-youtube.svg" alt="YouTube channel"></a>
         </div>
     </nav>
     <div class="parallax">
@@ -49,22 +54,13 @@
     </div>
     <section class="wallpapers">
         <div class="wallpapers-container">
-            <button id="button-left-carrousel" class="button-left button-custom"><img class="img-button-resize" src="assets/svg/icon-arrow-left.svg" alt="arrow left" /></button>
-            <div class="wallpaper-carrousel">
-                <picture>
-                    <source type="image/webp" srcset="assets/images/webp/1080/image1.webp" />
-                    <source type="image/jpeg" srcset="assets/images/jpg/1080/image1.jpg" />
-                    <source type="image/png" srcset="assets/images/png/1080/image1.png" />
-                    <source media="(min-width: 768px)" srcset="assets/svg/n1.svg">
-                    <img class="img-resize"  src="assets/images/webp/1080/image1.webp" alt="wallpaper1">
-                </picture>
-            </div>
-            <button id="button-right-carrousel" class="button-right button-custom"><img class="img-button-resize" src="assets/svg/icon-arrow-right.svg" alt="arrow button-right-carrousel" /></button>
+            <button id="button-left-carrousel" class="button-left button-custom" onclick="nextWallpaper(-1)"><img class="img-button-resize"
+                    src="assets/svg/icon-arrow-left.svg" alt="arrow left" /></button>
+            <div id="wallpaper-carousel" class="wallpaper-carrousel"></div>
+            <button id="button-right-carrousel" class="button-right button-custom" onclick="nextWallpaper(1)"><img class="img-button-resize"
+                    src="assets/svg/icon-arrow-right.svg" alt="arrow button-right-carrousel" /></button>
         </div>
-        <div class="dot-container">
-            <span class="dot hover dot-active"></span>
-            <span class="dot hover"></span>
-            <span class="dot hover"></span>
+        <div id="dot-container" class="dot-container">
         </div>
     </section>
     <section class="videos">
@@ -76,6 +72,7 @@
         <h2>Videos</h2>
         <div class="video-youtube-container"></div>
     </section>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
