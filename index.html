@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/svg/icon-hollow-knight-mono.svg">
+    <meta name="description" content="Hollow Knight Website">
+    <meta name="theme-color" content="#040404">
+    <title>Hollow Knight</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="" data-tooltip="Hollow Knight"><img src="assets/svg/icon-hollow-knight-mono.svg" alt="logo"></a>
+        </div>
+        <div class="icons-container">
+            <a href="https://www.teamcherry.com.au/" data-tooltip="Team Cherry" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-team-cherry.svg" alt="team-cherry page"></a>
+            <div class="separator"></div>
+            <a href="https://twitter.com/falcon_stefano" data-tooltip="Twitter : @falcon_stefano" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-twitter.svg" alt="twitter"></a>
+            <a href="https://github.com/alexfalconflores/hollow-knight-lading-page" data-tooltip="Github repository"
+                target="_blank" rel="noopener noreferrer"><img src="assets/svg/icon-github.svg"
+                    alt="github repository"></a>
+            <a href="https://www.youtube.com/c/TeamCherry" data-tooltip="YouTube Channel" target="_blank"
+                rel="noopener noreferrer"><img src="assets/svg/icon-youtube.svg" alt="YouTube channel"></a>
+        </div>
+    </nav>
+    <div class="parallax">
+        <div class="parallax-container">
+            <section class="info-phone">
+                <div class="info-container-phone">
+                    <h1>Alex Falcon</h1>
+                    <h2>@falcon_stefano</h2>
+                </div>
+            </section>
+            <div class="content">
+                <section class="info">
+                    <div class="info-container">
+                        <h1>Alex Falcon</h1>
+                        <h2>@falcon_stefano</h2>
+                    </div>
+                    <p>Pensaba que era lo único que me deparaba la vida, pero ese sentimiento se diluyó con el tiempo.
+                        ahora busco una nueva vocación, algo que , me llegue al alma y me haga querer avanzar</p>
+                </section>
+                <section class="logo-container">
+                    <img class="logo" src="assets/svg/logo.svg" alt="title" />
+                </section>
+            </div>
+        </div>
+    </div>
+    <section class="wallpapers">
+        <div class="wallpapers-container">
+            <button id="button-left-carrousel" class="button-left button-custom" onclick="nextWallpaper(-1)"><img
+                    class="img-button-resize" src="assets/svg/icon-arrow-left.svg" alt="arrow left" /></button>
+            <div id="wallpaper-carousel" class="wallpaper-carrousel"></div>
+            <button id="button-right-carrousel" class="button-right button-custom" onclick="nextWallpaper(1)"><img
+                    class="img-button-resize" src="assets/svg/icon-arrow-right.svg"
+                    alt="arrow button-right-carrousel" /></button>
+        </div>
+        <div id="dot-container" class="dot-container">
+        </div>
+    </section>
+    <section class="videos">
+        <div class="hollow-knight-container">
+            <a href="https://www.xbox.com/en-US/games/store/hollow-knight-voidheart-edition/9mw9469v91lm">
+                <img src="assets/svg/icon-hollow-knight-body-floor.svg" alt="Hollow Knight Body">
+            </a>
+        </div>
+        <h2>Videos</h2>
+        <div id="video-youtube-container" class="video-youtube-container">
+        </div>
+    </section>
+</body>
+
+</html>
