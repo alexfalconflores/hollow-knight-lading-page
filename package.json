@@ -1,0 +1,26 @@
+{
+  "name": "hollow-knight-lading-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexfalconflores/hollow-knight-lading-page.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "alexfalconflores",
+    "email": "alexfalconflores@hotmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexfalconflores/hollow-knight-lading-page/issues"
+  },
+  "homepage": "https://github.com/alexfalconflores/hollow-knight-lading-page#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
