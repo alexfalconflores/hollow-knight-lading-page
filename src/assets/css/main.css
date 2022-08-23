@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: 'Trajan Pro Regular';
     src: url('../font/Trajan\ Pro\ Regular.ttf');
 }
@@ -325,6 +325,41 @@ nav>.icons-container>a>img {
     margin: 0;
     grid-column: 3;
     grid-row: 2;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+.videos>.video-youtube-container>.video-youtube>.thumbnail-container{
+    display: grid;
+    grid-template-areas: thumb;
+}
+
+.videos>.video-youtube-container>.video-youtube>.thumbnail-container>.play-icon{
+    grid-area: thumb;
+    width: 6rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.videos>.video-youtube-container>.video-youtube>.thumbnail-container>.thumbnail {
+    border-radius: .8rem;
+    grid-area: thumb;
+    z-index: -1;
+}
+
+.videos>.video-youtube-container>.video-youtube>.title-container {
+    width: 320px;
+}
+
+.videos>.video-youtube-container>.video-youtube>.title-container>h3 {
+    margin: 0;
+    color: var(--color-font-1);
+    font-size: 1.4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -352,7 +387,7 @@ nav>.icons-container>a>img {
 }
 
 @supports (backdrop-filter: blur(84px) brightness(1) contrast(2)) {
-    .parallax-container{
+    .parallax-container {
         backdrop-filter: blur(84px) brightness(1) contrast(2)
     }
 }
@@ -367,7 +402,8 @@ nav>.icons-container>a>img {
         height: max-content;
         height: -moz-max-content;
     }
-    .dot-container{
+
+    .dot-container {
         width: max-content;
         width: -moz-max-content;
     }

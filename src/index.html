@@ -10,6 +10,7 @@
     <meta name="theme-color" content="#040404">
     <title>Hollow Knight</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script defer src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -55,11 +56,12 @@
     </div>
     <section class="wallpapers">
         <div class="wallpapers-container">
-            <button id="button-left-carrousel" class="button-left button-custom" onclick="nextWallpaper(-1)"><img class="img-button-resize"
-                    src="assets/svg/icon-arrow-left.svg" alt="arrow left" /></button>
+            <button id="button-left-carrousel" class="button-left button-custom" onclick="nextWallpaper(-1)"><img
+                    class="img-button-resize" src="assets/svg/icon-arrow-left.svg" alt="arrow left" /></button>
             <div id="wallpaper-carousel" class="wallpaper-carrousel"></div>
-            <button id="button-right-carrousel" class="button-right button-custom" onclick="nextWallpaper(1)"><img class="img-button-resize"
-                    src="assets/svg/icon-arrow-right.svg" alt="arrow button-right-carrousel" /></button>
+            <button id="button-right-carrousel" class="button-right button-custom" onclick="nextWallpaper(1)"><img
+                    class="img-button-resize" src="assets/svg/icon-arrow-right.svg"
+                    alt="arrow button-right-carrousel" /></button>
         </div>
         <div id="dot-container" class="dot-container">
         </div>
@@ -71,9 +73,9 @@
             </a>
         </div>
         <h2>Videos</h2>
-        <div class="video-youtube-container"></div>
+        <div id="video-youtube-container" class="video-youtube-container">
+        </div>
     </section>
-    <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>

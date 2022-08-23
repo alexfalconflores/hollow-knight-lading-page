@@ -1,15 +1,13 @@
 var sBrowser, sUsrAg = navigator.userAgent;
 let parallaxContainer = document.querySelector('.parallax-container');
 
-if(sUsrAg.indexOf("Firefox") > -1) {
+if (sUsrAg.indexOf("Firefox") > -1) {
     sBrowser = "Firefox";
 }
 
 if (sBrowser == "Firefox") {
     parallaxContainer.style.backgroundColor = "#171717";
 }
-
-
 
 let wallpaperCarousel = document.querySelector('#wallpaper-carousel');
 let dotContainer = document.querySelector('#dot-container');
@@ -99,3 +97,78 @@ function currentWallpaper(index) {
 function nextWallpaper(index) {
     showWallpapers(wallpaperIndex += index);
 }
+
+const videoYoutubeContainer = document.querySelector('#video-youtube-container');
+
+const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCZS2K8ZsUmujTuj3cNMyBSA&part=snippet%2Cid&order=date&maxResults=18';
+
+/* Fetching data from YouTube API. */
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '426e606a38msh2632a8b4514886dp176946jsn1ac50e7bfbd4',
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    }
+};
+
+async function fetchData(urlApi) {
+    const response = await fetch(urlApi, options);
+    const data = await response.json();
+    return data;
+}
+
+function videoYoutube(thumbnailUrl, title, videoId) {
+    // Video Container
+    let videoYoutube = document.createElement('div');
+    videoYoutube.className = 'video-youtube';
+
+    //Thumbnail Container
+    let thumbnailContainer = document.createElement('div');
+    thumbnailContainer.className = 'thumbnail-container';
+
+    //Icon Play
+    let iconPlay = document.createElement('img');
+    iconPlay.src = 'assets/svg/icon-youtube.svg';
+    iconPlay.alt = 'play';
+    iconPlay.className = 'play-icon';
+
+    //Thumbnail
+    let thumbnail = document.createElement('img');
+    thumbnail.src = thumbnailUrl;
+    thumbnail.alt = title;
+    thumbnail.className = 'thumbnail';
+    thumbnailContainer.append(iconPlay, thumbnail);
+
+    //Title
+    let titleContainer = document.createElement('div');
+    titleContainer.className = 'title-container';
+    let h3 = document.createElement('h3');
+    let span = document.createElement('span');
+    span.textContent = title;
+    span.href = `https://www.youtube.com/watch?v=${videoId}`;
+    span.target = '_blank';
+    span.rel = 'noopener noreferrer';
+    h3.append(span);
+    titleContainer.append(h3);
+
+    videoYoutube.append(thumbnailContainer, titleContainer);
+    return videoYoutube;
+}
+
+(async () => {
+    try {
+        const videos = await fetchData(API);
+        const items = videos.items.reverse();
+        let videosYoutube = items.map(video => videoYoutube
+            (
+                video.snippet.thumbnails.medium.url,
+                video.snippet.title,
+                video.id.videoId
+            )
+        );
+        console.log(videosYoutube);
+        videoYoutubeContainer.append(...videosYoutube);
+    } catch (error) {
+        console.error(error);
+    }
+})()
