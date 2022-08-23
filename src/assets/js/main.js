@@ -166,7 +166,6 @@ function videoYoutube(thumbnailUrl, title, videoId) {
                 video.id.videoId
             )
         );
-        console.log(videosYoutube);
         videoYoutubeContainer.append(...videosYoutube);
     } catch (error) {
         console.error(error);
